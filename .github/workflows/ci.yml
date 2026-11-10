@@ -19,15 +19,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install uv
+      - name: Install uv and Python
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: ".python-version"
+          python-version: "3.12"
 
       - name: Set up Node.js (for pyright)
         uses: actions/setup-node@v4
@@ -91,15 +87,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install uv
+      - name: Install uv and Python
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: ".python-version"
+          python-version: "3.12"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
